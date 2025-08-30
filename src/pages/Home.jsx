@@ -1,7 +1,7 @@
 import React from 'react'
 import Title from '../components/Title'
 import Form from '../components/Form'
-import Alert from '../components/alert'
+import Alert from '../components/Alert'
 
 
 
