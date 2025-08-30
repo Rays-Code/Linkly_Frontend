@@ -16,7 +16,7 @@ const Canvas = ({longURL, shortURL}) => {
       <ToastContainer />
         <div className='m-6'>{longURL}</div>
         <div className='flex gap-5'>
-          <div className='m-6'>{shortURL.trim(11, 27)}</div>
+          <div className='m-6'>{shortURL}</div>
           {
             shortURL && (
            <button onClick={copyShortURL} className="bg-white font-bold border border-4 shadow border-gray-500 hover:bg-blue-300 hover:text-white  active:scale-95 transition rounded-xl mt-4 h-11 px-10">{copytext}</button>         
