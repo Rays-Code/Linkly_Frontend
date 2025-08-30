@@ -11,7 +11,7 @@ const Form = () => {
         const res = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/shorten`, {
             longURL: longURL
         })
-        setShortURL(res.data.shortURL.slice(12, 28));
+        setShortURL(res.data.shortURL.slice(12, 29));
     }
 
   return (
