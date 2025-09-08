@@ -6,7 +6,7 @@ import Analytics from './pages/Analytics';
 
 const App = () => {
   return (
-    <div>
+    <div className='bg-white'>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
