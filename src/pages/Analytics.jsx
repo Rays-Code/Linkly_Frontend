@@ -1,18 +1,20 @@
 import React from 'react'
 import AnalyticsCanvas from '../components/AnalyticsCanvas'
+import Navbar from '../components/Navbar'
 
 const Analytics = () => {
   return (
-    <div className='w-screen h-full mt-20 flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center'>
+      <Navbar />
+
+      <div className=' mt-20 flex flex-col justify-center items-center'>
         <div>
-            <div>
-               <h1 className='text-2xl ml-32 font-bold mb-1'>URL Analytics Service :</h1>
-            </div>
-            <div>
+            {/* <div>
                 <p className='text-sm text-gray-400 mb-3 ml-6'>*enter your generated short link to know how many times it was clicked!</p>
-            </div>
+            </div> */}
             <AnalyticsCanvas />
         </div>   
+    </div>
     </div>
   )
 }

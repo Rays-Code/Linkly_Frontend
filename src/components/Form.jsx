@@ -15,11 +15,10 @@ const Form = () => {
     }
 
   return (
-    <div>
+    <div className='mt-6'>
         <div>
-            <label className='text-xl'>URL</label>
-            <input type="text" onChange={(e) => setLongURL(e.target.value)} placeholder='Paste URL to shorten' className='border border-black py-1 pl-2 pr-40 ml-2 rounded'/>
-            <button className='border shadow-md bg-blue-400 text-white font-bold rounded py-1 px-2 ml-2 active:scale-95 transition' onClick={shortenURL}>Shorten</button>
+            <input type="text" onChange={(e) => setLongURL(e.target.value)} placeholder='Paste URL to shorten' className='border border-black py-2 pl-10 pr-80 ml-2 rounded-lg'/>
+            <button className='bg-black text-white text-md font-medium rounded-lg py-2 px-6 ml-2 active:scale-95 transition' onClick={shortenURL}>Shorten</button>
         </div>
 
         <Canvas longURL={longURL} shortURL={shortURL}/>

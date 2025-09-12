@@ -37,20 +37,23 @@ const AnalyticsCanvas = () => {
   return (
     <div className=''>
         <div>
-            <label className='text-xl'>URL</label>
-            <input type="text" onChange={(e) => setShortURL(e.target.value)} placeholder='Paste short URL for analytics' className='border border-black py-1 pl-2 pr-40 ml-2 rounded'/>
-            <button onClick={fetchAnaytics} className='border shadow-md bg-blue-400 text-white font-bold rounded py-1 px-2 ml-2 active:scale-95 transition'>Fetch Analytics</button>
+            <h1 className='text-5xl mb-5 font-inter font-semibold ml-14'>Track total <span className='text-[#570BE4]'>clicks</span> Instantly</h1>
+            <p className='text-sm text-gray-600 mb-2 ml-24'>
+             *enter your generated short link to know how many times it was clicked!
+            </p>
+            <input type="text" onChange={(e) => setShortURL(e.target.value)} placeholder='Paste short URL for analytics' className='border border-black py-2 pl-10 pr-60 ml-8 rounded-lg'/>
+            <button onClick={fetchAnaytics} className='bg-black text-white text-md font-medium rounded-lg py-2 px-6 ml-2 active:scale-95 transition'>Fetch Analytics</button>
         </div>
         <Line 
-        className='mt-10'
+        className='bg-white p-4 rounded-lg shadow-lg ml-4 mt-5'
         data = {{
           labels: clicksHistory.map(data => data.label),
           datasets: [
             {
-              label: "-----No of Clicks Monthwise-----",
+              label: "No of Clicks Monthwise",
               data: clicksHistory.map(data => data.clicks),
-              backgroundColor: '#3B82F6',
-              borderColor: '#3B82F6'
+              backgroundColor: '#570BE4',
+              borderColor: '#570BE4'
             }
           ]
         }}
@@ -58,8 +61,8 @@ const AnalyticsCanvas = () => {
 
         <div>
   {clicksHistory?.[currentMonth] ? (
-    <h1 className='text-xl font-bold mt-10 ml-[90px]'>
-      Your link was clicked {clicksHistory[currentMonth].clicks} times in {clicksHistory[currentMonth].label}!
+    <h1 className='text-xl font-inter font-bold text-black mt-5 ml-[154px]'>
+      Your link was clicked <span className='text-white bg-[#570BE4] rounded opacity-75 px-2'>{clicksHistory[currentMonth].clicks} times</span> in {clicksHistory[currentMonth].label}!
     </h1>
   ) : (
     null
